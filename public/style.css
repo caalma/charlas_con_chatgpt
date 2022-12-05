@@ -1,0 +1,196 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4em;
+}
+
+body {
+    background: #222;
+    margin: 0;
+    padding: 0;
+}
+
+body.indice header {
+    justify-content: center;
+}
+body.indice section {
+    padding: 20px;
+}
+body.indice section * {
+    color: #eee;
+}
+
+.charlas {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.charlas a  {
+    background: rgba(100, 230, 180, 0.3);
+    color: #fff;
+    display: inline-block;
+    margin: 10px;
+    padding: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.charlas a:hover {
+    background: rgba(100, 230, 180, 0.4);
+}
+
+table {
+    border-radius: 6px;
+    border: 1px solid #777;
+    width: 100%;
+}
+table tr * {
+    color: #ccc;
+}
+table thead {
+    background: #333;
+}
+table td {
+    border-left: 1px solid #777;
+    border-bottom: 1px solid #777;
+}
+
+table td:first-child{
+    border-left: none;
+}
+table tr:last-child td {
+    border-bottom: none;
+}
+
+header {
+    background: #eee;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    _justify-content: space-around;
+}
+header a.menu {
+    text-decoration: none;
+    opacity: .7;
+    display:block;
+    flex-basis: 200px;
+}
+header a.menu:hover {
+    opacity: 1;
+}
+
+header h2 {
+    text-align: left;
+
+}
+header h2 span {
+    display: block;
+    font-size: 0.7em;
+    opacity: 0.5;
+    font-weight: normal;
+}
+
+.mensaje {
+    padding: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.mensaje.gpt p {
+    white-space: pre-line;
+}
+
+.mensaje.otro {
+    white-space: pre-line;
+}
+
+.mensaje.gpt {
+    background: #111;
+}
+.mensaje::before {
+    font-size: 0.8em;
+    opacity: 0.8;
+    display: block;
+
+}
+.mensaje.gpt::before {
+    content: 'ChatGPT:';
+    color: #53dbba;
+    font-weight: bold;
+}
+
+.mensaje.otro::before {
+    content: 'PERSONA:';
+}
+
+.mensaje:hover .ref-mensaje {
+    display: block;
+}
+
+.ref-mensaje {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 2px;
+    text-decoration: none;
+}
+.ref-mensaje:before {
+    content: '#';
+    color: #000;
+    background: #aaa;
+    padding: 0 3px;
+    border-radius: 4px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+section.notas {
+    background: #3a3;
+}
+
+body.notas {
+    background: #ffe844;
+}
+
+.nota {
+    padding: 20px;
+    border-top: 1px dashed #aab;
+    margin: 20px;
+}
+
+.nota div {
+    white-space: pre-line;
+}
+.nota * {
+    color: #222;
+}
+.nota a {
+    font-family: monospace;
+}
+
+
+pre {
+    padding: 9px;
+    border-radius: 4px;
+    background:#030303;
+    color:#ddd;
+}
+pre *, code {
+    font-family: monospace;
+}
+
+.hljs-comment { color:#888; }
+.hljs-keyword { color:#f88; }
+.hljs-meta { color:#88f; }
+.hljs-number { color:#8f8; }
+.hljs-variable { color:#683; }
+.hljs-string { color:#ee8; }
+.hljs-selector { color:#8ee; }
+.hljs-params { color:#e8e; }
+.hljs-operator { color:#f44; }
+.hljs-meta { color:#48f; }
+.hljs-keyword { color:#2f4; }
+.hljs-function { color:#ff0; }
+.hljs-built_in { color:#f80; }
+.hljs-attribute { color:#f32; }
+.hljs-title.function_ { color:#f3f; }

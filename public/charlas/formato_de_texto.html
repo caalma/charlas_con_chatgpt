@@ -1,0 +1,52 @@
+<html><head><title>ChatGPT : Formato de texto</title><link href="../style.css" rel="stylesheet"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="telephone=no, email=no" name="format-detection"/><meta content="yes" name="mobile-web-app-capable"/></head><body><header><a class="menu" href="/"><span>🏠</span></a><h2>ChatGPT : Formato de texto<span>Realizada el 2022-12-02 16:22:38.230053994 -0300 </span></h2></header>
+<main><div class="mensaje otro" id="m1"><a class="ref-mensaje" href="#m1"></a>me puedes formatear en json, los siguientes datos:
+a = 10
+b = 12.232
+equis = true
+nombre = Textilio Planer</div><div class="mensaje gpt" id="m2"><a class="ref-mensaje" href="#m2"></a><p>Para convertir los datos que mencionas a formato JSON, puedes usar la siguiente sintaxis:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-kotlin"><span class="hljs-keyword">data</span> = {
+   <span class="hljs-string">"a"</span>: <span class="hljs-number">10</span>,
+   <span class="hljs-string">"b"</span>: <span class="hljs-number">12.232</span>,
+   <span class="hljs-string">"equis"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-string">"nombre"</span>: <span class="hljs-string">"Textilio Planer"</span>
+}
+
+<span class="hljs-keyword">import</span> json
+json_data = json.dumps(<span class="hljs-keyword">data</span>)
+</code></pre><p>Donde <code>data</code> es un diccionario que contiene los datos que mencionas, y <code>json_data</code> es una cadena de texto en formato JSON que representa esos datos.</p></div><div class="mensaje otro" id="m3"><a class="ref-mensaje" href="#m3"></a>y en yaml </div><div class="mensaje gpt" id="m4"><a class="ref-mensaje" href="#m4"></a><p>Para convertir los datos que mencionas a formato YAML, puedes usar la siguiente sintaxis:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-kotlin"><span class="hljs-keyword">data</span> = {
+   <span class="hljs-string">"a"</span>: <span class="hljs-number">10</span>,
+   <span class="hljs-string">"b"</span>: <span class="hljs-number">12.232</span>,
+   <span class="hljs-string">"equis"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-string">"nombre"</span>: <span class="hljs-string">"Textilio Planer"</span>
+}
+
+<span class="hljs-keyword">import</span> yaml
+yaml_data = yaml.dump(<span class="hljs-keyword">data</span>)
+</code></pre><p>Donde <code>data</code> es un diccionario que contiene los datos que mencionas, y <code>yaml_data</code> es una cadena de texto en formato YAML que representa esos datos.</p></div><div class="mensaje otro" id="m5"><a class="ref-mensaje" href="#m5"></a>no quiero javascript o python, solamente quiero el yaml final</div><div class="mensaje gpt" id="m6"><a class="ref-mensaje" href="#m6"></a><p>En ese caso, puedes usar la siguiente sintaxis para obtener una cadena de texto en formato YAML que represente tus datos:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-vbnet"><span class="hljs-symbol">a:</span> <span class="hljs-number">10</span>
+<span class="hljs-symbol">b:</span> <span class="hljs-number">12.232</span>
+<span class="hljs-symbol">equis:</span> <span class="hljs-literal">true</span>
+<span class="hljs-symbol">nombre:</span> Textilio Planer
+</code></pre><p>Esta es la representación en formato YAML de los datos que mencionas. Puedes copiar y pegar este texto en un archivo con extensión <code>.yaml</code> o <code>.yml</code> para usarlo con una aplicación que admita este formato.</p></div><div class="mensaje otro" id="m7"><a class="ref-mensaje" href="#m7"></a>y el json final ?</div><div class="mensaje gpt" id="m8"><a class="ref-mensaje" href="#m8"></a><p>En ese caso, puedes usar la siguiente sintaxis para obtener una cadena de texto en formato JSON que represente tus datos:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-json"><span class="hljs-punctuation">{</span>
+   <span class="hljs-attr">"a"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">10</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">"b"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">12.232</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">"equis"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">"nombre"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Textilio Planer"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre><p>Esta es la representación en formato JSON de los datos que mencionas. Puedes copiar y pegar este texto en un archivo con extensión <code>.json</code> para usarlo con una aplicación que admita este formato.</p></div><div class="mensaje otro" id="m9"><a class="ref-mensaje" href="#m9"></a>Como sería esa asignación en Nim-Lang considerando que "b" es una constante ?</div><div class="mensaje gpt" id="m10"><a class="ref-mensaje" href="#m10"></a><p>En Nim, la sintaxis para asignar valores a variables y constantes es similar a la de otros lenguajes de programación. Para asignar el valor de <code>10</code> a la variable <code>a</code> y el valor de <code>12.232</code> a la constante <code>b</code>, puedes usar la siguiente sintaxis:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-csharp"><span class="hljs-keyword">var</span> a: <span class="hljs-built_in">int</span> = <span class="hljs-number">10</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">float</span> = <span class="hljs-number">12.232</span>
+</code></pre><p>En este ejemplo, la variable <code>a</code> se declara como un entero y se le asigna el valor de <code>10</code>, mientras que la constante <code>b</code> se declara como un número de punto flotante y se le asigna el valor de <code>12.232</code>. Para asignar el valor de <code>true</code> a la variable <code>equis</code> y el valor de <code>"Textilio Planer"</code> al identificador <code>nombre</code>, puedes usar la siguiente sintaxis:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-csharp"><span class="hljs-keyword">var</span> equis: <span class="hljs-built_in">bool</span> = <span class="hljs-literal">true</span>
+<span class="hljs-keyword">let</span> nombre: <span class="hljs-built_in">string</span> = <span class="hljs-string">"Textilio Planer"</span>
+</code></pre><p>En este caso, la variable <code>equis</code> se declara como un valor booleano y se le asigna el valor de <code>true</code>, mientras que el identificador <code>nombre</code> se declara como una cadena de texto y se le asigna el valor de <code>"Textilio Planer"</code>.</p></div><div class="mensaje otro" id="m11"><a class="ref-mensaje" href="#m11"></a>Me escribes una función que imprima todos esos valores, en Nim ? </div><div class="mensaje gpt" id="m12"><a class="ref-mensaje" href="#m12"></a><p>Para imprimir los valores de las variables y constantes que mencionas, puedes usar la siguiente función en Nim:</p><pre><code class="CodeSnippet__CodeContent-sc-1ifybgh-4 gqYyQN hljs language-csharp">import strformat
+
+<span class="hljs-keyword">var</span> a: <span class="hljs-built_in">int</span> = <span class="hljs-number">10</span>
+<span class="hljs-keyword">const</span> b: <span class="hljs-built_in">float</span> = <span class="hljs-number">12.232</span>
+<span class="hljs-keyword">var</span> equis: <span class="hljs-built_in">bool</span> = <span class="hljs-literal">true</span>
+<span class="hljs-keyword">let</span> nombre: <span class="hljs-built_in">string</span> = <span class="hljs-string">"Textilio Planer"</span>
+
+<span class="hljs-function">proc <span class="hljs-title">imprimir_valores</span>()</span> =
+  <span class="hljs-keyword">let</span> valores = $a, b, equis, nombre
+  echo fmt<span class="hljs-string">"Los valores son: {valores}"</span>
+
+imprimir_valores()
+</code></pre><p>Esta función declara las variables y constantes que mencionas y luego define una función llamada <code>imprimir_valores</code> que imprime los valores de esas variables y constantes usando la función <code>echo</code> de Nim. Para usar la función <code>imprimir_valores</code>, simplemente llámala al final del código como se muestra en el ejemplo.</p></div></main>
+
+</body></html>
