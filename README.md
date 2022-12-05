@@ -1,6 +1,6 @@
 # Charlas con chatGPT
 
-Compilación de charlas exploratorias con ChatGPT.
+Compilación de charlas exploratorias con ChatGPT (https://chat.openai.com/).
 
 Los HTML originales fueron obtenidos con las herramientas de desarrollador del browser.
 Que posteriormente fueron reprocesados (para eliminar tags innecesarios y de interfaz) mediante el script "actualizar.py" de la carpeta "utiles".
