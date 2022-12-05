@@ -5,3 +5,4 @@ Compilación de charlas exploratorias con ChatGPT.
 Los HTML originales fueron obtenidos con las herramientas de desarrollador del browser.
 Que posteriormente fueron reprocesados (para eliminar tags innecesarios y de interfaz) mediante el script "actualizar.py" de la carpeta "utiles".
 
+En ese postprocesado se le agregaron datos extras, como flechas y elementos para facilitar la navegación y adaptar la estética.
