@@ -252,7 +252,7 @@ publicar           limpia las charlas crudas y las pone públicas
 publicar_nuevos    solo aplica limpieza a archivos no publicados
 agregar            agrega las charlas nuevas y actualiza el registro
 vaciar_charlas     elimina todas las charlas públicas
-todo               activa: agregar, limpiar, indice, notas
+todo               activa: agregar, publicar, indice, notas
 
 Si no se indican acciones se asume 'todo'.
 Pueden indicarse más de una.
@@ -272,7 +272,7 @@ if __name__ == '__main__':
     # definir acciones
     acciones = ['todo'] if len(argv) == 1 else argv[1:]
     if 'todo' in acciones:
-        acciones = ['indice', 'notas', 'limpiar', 'agregar']
+        acciones = ['agregar', 'publicar', 'notas', 'indice']
 
     # mostrar ayuda
     if 'ayuda' in acciones:
