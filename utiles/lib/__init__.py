@@ -218,7 +218,7 @@ def hacer_indice(cfg):
     rpu = cfg['ruta_publica']
     rcp = cfg['ruta_charlas_publicas']
 
-    ruta_raiz = rcp.replace('/docs/', '/')
+    ruta_raiz = rcp.replace('../docs/', '/')
 
     formato = '%Y-%m-%d %H:%M:%S.%f -0300'
 
