@@ -177,8 +177,12 @@ def hacer_indice():
 
     ruta_raiz = ruta_charlas.replace('/docs/', '/')
 
+    formato = '%Y-%m-%d %H:%M:%S.%f -0300'
+
+    fecha_de_actualizacion = datetime.now().strftime(formato)
+
     titulo = 'Compilación de charlas exploratorias con ChatGPT'
-    html_cabecera = f'<header><h2>{titulo}</h2></header>'
+    html_cabecera = f'<header><div><h2>{titulo}</h2><p><small>ÚLTIMA ACUTUALIZACIÓN: {fecha_de_actualizacion}</small></p></div></header>'
     html_notas = '<section class="notas"><p>Algunos comentarios y notas sobre las capacidades y dificultades encontradas los dejo en <a href="./notas.html">esta página</a>.</p></section>'
     html_charlas = '<section><h3>Charlas realizadas</h3><div class="charlas"></div></section>'
     html_base = f'<html><head><link href="./style.css" rel="stylesheet"/><title>{titulo}</title></head><body>{html_cabecera}{html_notas}{html_charlas}</body></html>'
