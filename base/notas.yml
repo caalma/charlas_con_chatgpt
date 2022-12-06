@@ -1,0 +1,37 @@
+---
+-
+  ref:
+    - '/charlas/juegos_ecuaciones_y_contar_oulipo_y_nim.html#m57'
+  tex: |
+    Puede recordar características de la charla.
+
+
+- ref:
+    - '/charlas/listas_y_query.html#m1'
+    - '/charlas/generacion_de_texto.html#m1'
+    - '/charlas/palindromos.html#m1'
+    - '/charlas/edicion_de_texto.html#m1'
+  tex: |
+    Sigue instrucciones paso a paso para crear texto.
+    Aunque no es muy fiable porque en ocaciones altera la solicitud.
+
+
+- ref:
+    - '/charlas/tomates_y_manejo_de_url.html#m33'
+  tex: |
+    Analiza correctamente urls. Pudiendo incluso generar modificaciones en partes específicas.
+
+
+- ref:
+    - '/charlas/fechas_zona_horarias.html#m23'
+    - '/charlas/livecoding.html#m15'
+
+  tex: |
+    En ocaciones puede condicionarsele el tipo de salida.
+    Por ejemplo: pidiéndole que no sea verboso, o indicando que la salida la genere en formato de código (por ejemplo usando "code-format"), o que el resultado sea una lista (diciendole "dame una lista", o "listado de").
+
+- ref:
+    - '/charlas/vegetales_y_simbolos.html#m1'
+    - '/charlas/entrevista_colores_y_generacion_de_html.html#m21'
+  tex: |
+    Muchas veces se corta el texto que genera. En esos casos puede indicársele que prosiga utilizando: "continua", "aún falta", "más", "+". Seguramente deben existir otras formas que no se me ocurrió probar.

@@ -1,0 +1,7 @@
+---
+ruta_publica: '../docs/'
+ruta_charlas_publicas: '../docs/charlas/'
+ruta_charlas_crudas: '../base/charlas_crudas/'
+ruta_charlas_nuevas: '../base/charlas_nuevas/'
+arc_registro: '../base/registro_temporal.yml'
+arc_notas: '../base/notas.yml'
