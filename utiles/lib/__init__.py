@@ -202,17 +202,17 @@ def agregar_charlas(cfg):
     formato = '%Y-%m-%d %H:%M:%S.%f -0300'
 
     for arc in listdir(rcn):
-        r_arc = f'{rcn}{arc}'
-        fecha = datetime.fromtimestamp(getmtime(r_arc)).strftime(formato)
+        if arc.endswith('.html'):
+            r_arc = f'{rcn}{arc}'
+            fecha = datetime.fromtimestamp(getmtime(r_arc)).strftime(formato)
 
-        with open(rar, 'a') as f:
-            f.write(f"{arc}: '{fecha}'\n")
+            with open(rar, 'a') as f:
+                f.write(f"{arc}: '{fecha}'\n")
 
-        r_arc_agregado = f'{rcc}{arc}'
-        move(r_arc, r_arc_agregado)
+            r_arc_agregado = f'{rcc}{arc}'
+            move(r_arc, r_arc_agregado)
 
-        print(f'Agregado: {arc}')
-
+            print(f'Agregado: {arc}')
 
 def hacer_indice(cfg):
     rpu = cfg['ruta_publica']
