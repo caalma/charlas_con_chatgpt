@@ -6,3 +6,5 @@ Los HTML originales fueron obtenidos con las herramientas de desarrollador del b
 Que posteriormente fueron reprocesados (para eliminar tags innecesarios y de interfaz) mediante el script "./utiles/actualizar.py".
 
 En ese postprocesado se le agregaron datos extras, como flechas y elementos para facilitar la navegación y adaptar la estética.
+
+El contenido puede navegarse en https://caalma.github.io/charlas_con_chatgpt/.
