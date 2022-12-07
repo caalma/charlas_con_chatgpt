@@ -1,6 +1,12 @@
 ---
 -
   ref:
+    - '/charlas/analisis_de_la_epopeya_de_los_15_jinetes_2.html#m1'
+    - '/charlas/analisis_1_de_la_epopeya_de_los_15_jinetes.html#m29'
+  tex: |
+    Tiene un límite para las entradas de los usuarios. Aproximadamente de 2400 caracteres.
+-
+  ref:
     - '/charlas/juegos_ecuaciones_y_contar_oulipo_y_nim.html#m57'
   tex: |
     Puede recordar características de la charla.
