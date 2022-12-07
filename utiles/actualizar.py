@@ -4,10 +4,12 @@
 from sys import argv
 from os import listdir
 from os.path import exists
+import yaml
 from lib import (
-    yaml, publicar,
-    hay_repeticion_de_nombres, agregar_charlas,
-    hacer_notas, hacer_indice )
+    hay_repeticion_de_nombres,
+    hacer_notas, hacer_indice,
+    publicar_charlas, agregar_charlas,
+    vaciar_charlas_publicas)
 
 ayuda = """
 Las acciones diposnibles son:
@@ -18,7 +20,7 @@ publicar           limpia las charlas crudas y las pone públicas
 publicar_nuevos    solo aplica limpieza a archivos no publicados
 agregar            agrega las charlas nuevas y actualiza el registro
 vaciar_charlas     elimina todas las charlas públicas
-todo               activa: agregar, publicar, indice, notas
+todo               activa: agregar, publicar_nuevos, indice, notas
 
 Si no se indican acciones se asume 'todo'.
 Pueden indicarse más de una.
@@ -26,9 +28,9 @@ Pueden indicarse más de una.
 
 if __name__ == '__main__':
     # definir acciones
-    acciones = ['todo'] if len(argv) == 1 else argv[1:]
+    acciones = ['ayuda'] if len(argv) == 1 else argv[1:]
     if 'todo' in acciones:
-        acciones = ['agregar', 'publicar', 'notas', 'indice']
+        acciones = ['agregar', 'publicar_nuevos', 'notas', 'indice']
 
     if 'publicar_nuevos' in acciones:
         acciones.append('publicar')
@@ -57,14 +59,13 @@ if __name__ == '__main__':
             arc_publico = f'{rch}{arc}'
             try:
                 if 'publicar_nuevos' in acciones:
-
                     if not exists(arc_publico):
-                        publicar(arc_crudo, cfg)
+                        publicar_charlas(arc_crudo, cfg)
                 else:
-                    publicar(arc_crudo, cfg)
+                    publicar_charlas(arc_crudo, cfg)
 
             except Exception as error:
-                print(f'Fallo la publicación de: {arc}.\n{error}')
+                print(f'Fallo la publicación de: {arc} .\n{error}')
 
     # vaciar charlas
     if 'vaciar_charlas' in acciones:
