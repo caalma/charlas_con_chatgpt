@@ -12,7 +12,8 @@ from lib import (
     vaciar_charlas_publicas)
 
 ayuda = """
-Las acciones diposnibles son:
+Las acciones disponibles son:
+
 ayuda              muestra este contenido
 indice             reconstruye el índice general
 notas              reconstruye la página de notas

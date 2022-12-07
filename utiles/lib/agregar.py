@@ -1,6 +1,7 @@
 from shutil import move
 from datetime import datetime
 from os import listdir
+from os.path import getmtime
 
 def agregar_charlas(cfg):
     rcc = cfg['ruta_charlas_crudas']
