@@ -3,15 +3,18 @@
 
 from livereload import Server
 import webbrowser
+import yaml
 
-if __name__ == '__main__':
-    ruta = '../docs/'
-    host = 'localhost'
-    port = 9998
+with open('cfg.yml', 'r') as f:
+    cfg = yaml.safe_load(f)
 
-    webbrowser.open(f'http://{host}:{port}')
+    r = cfg['ruta_publica']
+    h = cfg['server']['host']
+    p = cfg['server']['port']
+
+    webbrowser.open(f'http://{h}:{p}')
 
     server = Server()
-    server.watch(ruta)
+    server.watch(r)
 
-    server.serve(root=ruta, host=host, port=port)
+    server.serve(root=r, host=h, port=p)
