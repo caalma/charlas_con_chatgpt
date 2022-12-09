@@ -5,7 +5,8 @@ from os.path import basename, splitext
 
 
 tags_a_eliminar = [
-    'svg', 'script', 'link', 'style', 'form', 'button', 'img', 'next-route-announcer',
+    #'img',
+    'svg', 'script', 'link', 'style', 'form', 'button', 'next-route-announcer',
     'meta', 'noscript', 'deepl-inline-translate', 'deepl-inline-popup',
     'deepl-inline-trigger'
     ]
@@ -17,7 +18,8 @@ clases_a_eliminar = [
     'ConversationItem__Role-sc-18srrdc-2',
     'ConversationItem__ActionButtons-sc-18srrdc-4',
     'ThreadLayout__BottomSpacer-sc-wfs93o-1',
-    'flex-grow flex-shrink-0'
+    'flex-grow flex-shrink-0',
+    'text-xs text-black/50 dark:text-white/50 pt-2 pb-3 px-3 md:pt-3 md:pb-6 md:px-4 text-center'
     ]
 
 
