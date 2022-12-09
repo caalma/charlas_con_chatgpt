@@ -1,5 +1,6 @@
 from os import listdir, remove
 from os.path import exists, join
+import yaml
 
 
 def humanizar(text):
@@ -11,7 +12,6 @@ def nuevo_tag(dom, name, attributes={}):
     for k, v in attributes.items():
         tag.attrs[k] = v
     return tag
-
 
 def agregar_metadatos_basicos(dom):
     tag = dom.find('head')
@@ -30,7 +30,6 @@ def agregar_metadatos_basicos(dom):
                           'content':'yes'
                          }))
 
-
 def hay_repeticion_de_nombres(cfg):
     rcc = cfg['ruta_charlas_crudas']
     rcn = cfg['ruta_charlas_nuevas']
@@ -47,9 +46,13 @@ def hay_repeticion_de_nombres(cfg):
         print('Cambia los nombre manualmente.')
     return hay_repetidos
 
-
 def vaciar_charlas_publicas(cfg):
     rcp = cfg['ruta_charlas_publicas']
 
     for arc in listdir(rcp):
         remove(join(rcp, arc))
+
+
+def registros_temporales(cfg):
+    with open(cfg['arc_registro'], 'r') as f:
+        return yaml.safe_load(f)

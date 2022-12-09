@@ -2,7 +2,8 @@ from os.path import splitext
 from datetime import datetime
 from bs4 import BeautifulSoup
 from os import listdir
-from .general import humanizar, agregar_metadatos_basicos
+from .general import (humanizar, agregar_metadatos_basicos,
+                      registros_temporales, nuevo_tag)
 
 
 def hacer(cfg):
@@ -21,6 +22,8 @@ def hacer(cfg):
     html_charlas = '<section><h3>Charlas realizadas</h3><div class="charlas"></div></section>'
     html_base = f'<html><head><link href="./style.css" rel="stylesheet"/><title>{titulo}</title></head><body>{html_cabecera}{html_notas}{html_charlas}</body></html>'
 
+    regtmp = registros_temporales(cfg)
+
     dom = BeautifulSoup(html_base, 'html5lib')
     agregar_metadatos_basicos(dom)
 
@@ -29,11 +32,20 @@ def hacer(cfg):
 
     tag_charlas = dom.find(class_='charlas')
 
-    for ar in sorted(listdir(rcp)):
+    lista_ordenada = { regtmp[v]:v for v in listdir(rcp)}
+
+    for fecha in sorted(lista_ordenada.keys(), reverse=True):
+        ar = lista_ordenada[fecha]
         tag = dom.new_tag('a')
         tag.attrs['href'] = f'{ruta_raiz}{ar}'
-        tag.string = humanizar(splitext(ar)[0])
         tag_charlas.append(tag)
+        tag_small = nuevo_tag(dom, 'small')
+        tag_small.string = fecha.split(' ')[0]
+        tag.append(tag_small)
+        tag_b = nuevo_tag(dom, 'b')
+        tag_b.string = humanizar(splitext(ar)[0])
+        tag.append(tag_b)
+
 
     with open(f'{rpu}index.html', 'w') as fw:
         fw.write(str(dom))
